@@ -9,7 +9,7 @@ import gg.jte.resolve.ResourceCodeResolver;
 //import hexlet.code.controller.UrlPageController;
 //import hexlet.code.controller.UrlsController;
 //import hexlet.code.repository.BaseRepository;
-//import hexlet.code.util.NamedRoutes;
+//import hexlet.code.util.Routes;
 import io.javalin.Javalin;
 
 import java.io.BufferedReader;
