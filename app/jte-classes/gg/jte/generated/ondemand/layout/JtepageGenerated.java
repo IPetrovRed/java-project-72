@@ -38,7 +38,7 @@ public final class JtepageGenerated {
 		jteOutput.writeContent("\r\n    ");
 		jteOutput.setContext("main", null);
 		jteOutput.writeUserContent(content);
-		jteOutput.writeContent("\r\n</main>\r\n<footer class=\"footer border-top py-1 mt-4 bg-light\">\r\n    <p class=\"text-dark bg-muted text-center\">by <a href=\"https://github.com/IPetrovRed\" class=\"text-info\">SomethingAboutToTell</a></p>\r\n</footer>\r\n</body>\r\n</html>");
+		jteOutput.writeContent("\r\n</main>\r\n<footer class=\"footer border-top py-1 mt-4 bg-light\">\r\n    <p class=\"text-dark bg-muted text-center\">by <a href=\"https://github.com/IPetrovRed\" class=\"text-info\">Ilya Petrov</a></p>\r\n</footer>\r\n</body>\r\n</html>");
 	}
 	public static void renderMap(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, java.util.Map<String, Object> params) {
 		BasicPage page = (BasicPage)params.getOrDefault("page", null);
