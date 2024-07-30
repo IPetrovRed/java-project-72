@@ -6,10 +6,11 @@
 
 ## Page analyzer
 ```bash
-This project executes basic SEO analysis of given website page. Users gets info about website page title, description, response code and "h1".
+This project executes basic SEO analysis of given website page. 
+Users gets info about website page title, description, response code and "h1".
 You can test project demon by link below:
-https://java-project-72-bsl2.onrender.com/
 ```
+https://java-project-72-bsl2.onrender.com/
 
 ## Java package
 
