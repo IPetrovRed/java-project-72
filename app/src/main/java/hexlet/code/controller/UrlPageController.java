@@ -15,7 +15,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import java.sql.SQLException;
-import java.sql.Timestamp;
+//import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class UrlPageController {
             HttpResponse<String> response = Unirest.get(url.getName()).asString();
             Document doc = Jsoup.parse(response.getBody());
             int statusCode = response.getStatus();
-            Timestamp dateandtime = new Timestamp(System.currentTimeMillis());
+            LocalDateTime dateandtime = LocalDateTime.now();
             String title = doc.title();
             Element h1El = doc.selectFirst("h1");
             String h1 = h1El == null ? "" : h1El.text();
@@ -54,13 +55,18 @@ public class UrlPageController {
             UrlCheckRepository.saveUrlCheck(newCheck);
             ctx.sessionAttribute("flash", "Страница успешно проверена");
             ctx.sessionAttribute("flash-type", "success");
+            ctx.status(200); // Установка статуса ответа 200 OK
+            ctx.redirect(Routes.urlPath(id));
         } catch (UnirestException e) {
             ctx.sessionAttribute("flash", "Некорректный URL");
             ctx.sessionAttribute("flash-type", "danger");
+            ctx.status(400); // Установка статуса ответа 400 Bad Request
+            ctx.redirect(Routes.urlPath(id));
         } catch (Exception e) {
             ctx.sessionAttribute("flash", e.getMessage());
             ctx.sessionAttribute("flash-type", "danger");
+            ctx.status(500); // Установка статуса ответа 500 Internal Server Error
+            ctx.redirect(Routes.urlPath(id));
         }
-        ctx.redirect(Routes.urlPath(id));
     }
 }

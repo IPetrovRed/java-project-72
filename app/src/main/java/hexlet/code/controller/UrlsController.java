@@ -15,7 +15,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-
 public class UrlsController {
     public static void createUrl(Context ctx) throws SQLException {
         var inputUrl = ctx.formParam("url");

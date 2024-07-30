@@ -31,7 +31,7 @@ content = @`
                         <a href="${Routes.urlsPath()}/${url.getId()}">${url.getName()}</a>
                     </td>
                     <td>
-                        ${urlCheck == null ? "" : urlCheck.getCreatedAt().toLocalDateTime().format(formatter)}
+                        ${urlCheck == null ? "" : urlCheck.getCreatedAt().format(formatter)}
                     </td>
                     <td>
                         ${urlCheck == null ? "" : String.valueOf(urlCheck.getStatusCode())}
