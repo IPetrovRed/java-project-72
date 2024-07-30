@@ -4,6 +4,9 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/169916089f20649717aa/test_coverage)](https://codeclimate.com/github/IPetrovRed/java-project-72/test_coverage)
 [![Java CI](https://github.com/IPetrovRed/java-project-78/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/IPetrovRed/java-project-72/actions/workflows/main.yml)
 
+## Анализатор страниц
+https://java-project-72-bsl2.onrender.com/
+
 ## Java package
 
 ## Run
@@ -34,9 +37,4 @@ make report
 ## Run checkstyle
 ```bash
 make lint
-```
-
-## Check update dependencies and plugins
-```bash
-make check-deps
 ```
