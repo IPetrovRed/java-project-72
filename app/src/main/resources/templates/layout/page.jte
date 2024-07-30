@@ -1,6 +1,6 @@
 @import gg.jte.Content
 @import hexlet.code.dto.BasicPage
-@import hexlet.code.util.NamedRoutes
+@import hexlet.code.util.Routes
 
 @param BasicPage page = null
 @param Content content
@@ -24,10 +24,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="${NamedRoutes.mainPath()}">Главная</a>
+                <a class="nav-link" href="${Routes.mainPath()}">Главная</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="${NamedRoutes.urlsPath()}">Сайты</a>
+                <a class="nav-link" href="${Routes.urlsPath()}">Сайты</a>
             </li>
         </ul>
     </div>

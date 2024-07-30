@@ -6,7 +6,6 @@ import hexlet.code.repository.UrlRepository;
 import hexlet.code.repository.UrlCheckRepository;
 import hexlet.code.util.Routes;
 import io.javalin.http.Context;
-
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;

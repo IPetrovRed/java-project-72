@@ -1,5 +1,5 @@
 @import hexlet.code.dto.UrlPage
-@import hexlet.code.util.NamedRoutes
+@import hexlet.code.util.Routes
 @import java.time.format.DateTimeFormatter
 @param UrlPage page
 
@@ -30,7 +30,7 @@ content = @`
         <br>
         <br>
         <h2>Проверки</h2>
-        <form method="post" action="${NamedRoutes.urlChecks(page.getUrl().getId())}">
+        <form method="post" action="${Routes.urlChecks(page.getUrl().getId())}">
             <button type="submit" class="h-100 btn btn-sm btn-info px-sm-4">Запустить проверку</button>
         </form>
         <table class="table table-bordered table-hover mt-3">

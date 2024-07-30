@@ -8,14 +8,12 @@ import hexlet.code.repository.UrlCheckRepository;
 import hexlet.code.util.Routes;
 import io.javalin.http.Context;
 import io.javalin.http.NotFoundResponse;
-
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
 import kong.unirest.UnirestException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Collections;
