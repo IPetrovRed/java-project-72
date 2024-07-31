@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-//import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +14,10 @@ import java.util.Optional;
 public class UrlRepository extends BaseRepository {
     public static void save(Url url) throws SQLException {
         String sql = "INSERT INTO urls(name, created_at) VALUES(?,?)";
-//        Timestamp dateandtime = new Timestamp(System.currentTimeMillis());
         LocalDateTime dateandtime = LocalDateTime.now();
         try (var conn = dataSource.getConnection();
              var preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             preparedStatement.setString(1, url.getName());
-//            preparedStatement.setTimestamp(2, new Timestamp(System.currentTimeMillis()));
             preparedStatement.setObject(2, dateandtime);
             preparedStatement.executeUpdate();
             var generatedKeys = preparedStatement.getGeneratedKeys();
@@ -42,7 +39,6 @@ public class UrlRepository extends BaseRepository {
             while (resultSet.next()) {
                 long id = resultSet.getLong("id");
                 String name = resultSet.getString("name");
-//                Timestamp dateandtime = resultSet.getTimestamp("created_at");
                 LocalDateTime dateandtime = resultSet.getObject("created_at", LocalDateTime.class);
                 Url url = new Url(name);
                 url.setId(id);
@@ -61,7 +57,6 @@ public class UrlRepository extends BaseRepository {
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 String name = resultSet.getString("name");
-//                Timestamp dateandtime = resultSet.getTimestamp("created_at");
                 LocalDateTime dateandtime = resultSet.getObject("created_at", LocalDateTime.class);
                 Url url = new Url(name);
                 url.setId(id);
@@ -80,7 +75,6 @@ public class UrlRepository extends BaseRepository {
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 String name = resultSet.getString("name");
-//                Timestamp dateandtime = resultSet.getTimestamp("created_at");
                 LocalDateTime dateandtime = resultSet.getObject("created_at", LocalDateTime.class);
                 long urlId = resultSet.getLong("id");
                 Url url = new Url(name);
@@ -100,7 +94,6 @@ public class UrlRepository extends BaseRepository {
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 String name = resultSet.getString("name");
-//                Timestamp dateandtime = resultSet.getTimestamp("created_at");
                 LocalDateTime dateandtime = resultSet.getObject("created_at", LocalDateTime.class);
                 long id = resultSet.getLong("id");
                 Url url = new Url(name);
