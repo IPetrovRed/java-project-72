@@ -27,7 +27,7 @@ public class UrlCheckRepository extends BaseRepository {
             preparedStatement.setString(4, newCheck.getH1());
             preparedStatement.setString(5, newCheck.getDescription());
 //            preparedStatement.setTimestamp(6, dateandtime);
-            preparedStatement.setObject(6,dateandtime);
+            preparedStatement.setObject(6, dateandtime);
             preparedStatement.executeUpdate();
             var generatedKeys = preparedStatement.getGeneratedKeys();
             if (generatedKeys.next()) {
@@ -85,3 +85,4 @@ public class UrlCheckRepository extends BaseRepository {
         }
     }
 }
+
