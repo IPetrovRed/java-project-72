@@ -64,7 +64,7 @@ content = @`
                         ${check.getDescription()}
                     </td>
                     <td>
-                        ${check.getCreatedAt().format(formatter)}</td>
+                        ${check.getCreatedAt().format(formatter)}
                     </td>
                 </tr>
             @endfor
